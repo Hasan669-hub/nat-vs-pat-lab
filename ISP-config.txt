@@ -1,0 +1,21 @@
+! ISP - Central hub router simulating the internet core
+! Directly connected to R3, R4, and Http-Server - acts as router for all subnets
+
+hostname ISP
+
+interface e0/0
+ description to Http-Server
+ ip address 203.0.113.1 255.255.255.252
+ no shutdown
+
+interface e0/1
+ description to R3 - Office A
+ ip address 203.0.113.17 255.255.255.240
+ no shutdown
+
+interface e0/2
+ description to R4 - Office B
+ ip address 203.0.113.33 255.255.255.252
+ no shutdown
+
+end
