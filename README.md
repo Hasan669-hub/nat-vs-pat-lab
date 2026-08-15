@@ -12,7 +12,7 @@ A hands-on Cisco IOS lab built in **pnetlab**, designed to demonstrate the pract
 
 ## 🖧 Topology
 
-![Topology Diagram](topology/topology-diagram.png)
+![Topology Diagram](topology/Topology.png)
 
 | Node | Role |
 |---|---|
