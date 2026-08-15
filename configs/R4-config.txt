@@ -1,0 +1,25 @@
+! R4 - Office B Edge Router
+! PAT / NAT Overload (PC11-PC14 sharing one public IP)
+
+hostname R4
+
+interface e0/0
+ description Outside - to ISP
+ ip address 203.0.113.34 255.255.255.252
+ ip nat outside
+ no shutdown
+
+interface e0/1
+ description Inside - to SW6
+ ip address 192.168.20.1 255.255.255.0
+ ip nat inside
+ no shutdown
+
+ip route 0.0.0.0 0.0.0.0 203.0.113.33
+
+ip access-list standard PAT-ACL
+ permit 192.168.20.0 0.0.0.255
+
+ip nat inside source list PAT-ACL interface e0/0 overload
+
+end
