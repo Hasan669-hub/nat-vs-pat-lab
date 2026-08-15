@@ -61,7 +61,7 @@ Routing: since R3, R4, and Http-Server each have a single exit point, a simple d
 
 ## 📸 Screenshots
 
-| Screenshot | Shows |
+| image | Shows |
 |---|---|
 | `01-static-nat-translation.png` | `show ip nat translations` — PC7 mapped permanently to 203.0.113.19 |
 | `02-dynamic-nat-pool-exhaustion.png` | `show ip nat statistics` — pool at 100% allocation, misses counter increasing |
